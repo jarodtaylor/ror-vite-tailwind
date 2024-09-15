@@ -1,4 +1,4 @@
-import "~/stylesheets/index.css";
+import "~/stylesheets/application.css";
 import "~/controllers";
 import "@hotwired/turbo-rails";
 // To see this message, add the following to the `<head>` section in your
