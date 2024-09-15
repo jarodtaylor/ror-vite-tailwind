@@ -4,7 +4,7 @@
     <title><%= content_for?(:title) ? strip_tags(yield(:title)) : "Ror Vite Tailwind" %></title>
     <meta name="apple-mobile-web-app-title" content="Ror Vite Tailwind">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,7 +15,7 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <%#= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <%= vite_client_tag %>
     <%= vite_javascript_tag "application", "data-turbo-track": "reload" %>
     <!--
