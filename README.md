@@ -13,6 +13,7 @@ The local develpment setup documents assume you're using a Mac and using [Homebr
 - Node 18 (LTS) or newer
 - Yarn 1.x (classic)
 - PostgreSQL must be installed and accepting connections
+- Redis
 
 ## Local Development Setup (optional)
 
@@ -69,11 +70,22 @@ asdf install ruby latest
 ```
 asdf install nodejs latest
 ```
+
+### Set your global .tool-versions to use Ruby and NodeJS
+#### Ruby
+```
+asdf global ruby latest
+```
+#### NodeJS
+```
+asdf global nodejs latest
+```
+
 </details>
 
 <details>
   
-  <summary>Install Postgresql</summary>
+  <summary>Make sure Postgres & Redis are running</summary>
 
   ### Get Postgres and Redis running
   If you don't already have postgres and redis installed, install them with homebrew.
@@ -86,6 +98,16 @@ asdf install nodejs latest
   brew services start postgresql@15 && brew services start redis
   ```
   
+</details>
+
+<details>
+  
+  <summary>Install Yarn</summary>
+
+  Assuming you already have NodeJS installed and the latest version set up globally, add the yarn package. 
+  ```
+  npm install --global yarn
+  ```
 </details>
 
 ## Getting started
