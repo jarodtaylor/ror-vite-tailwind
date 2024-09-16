@@ -19,10 +19,19 @@ You can view the [.tool-versions](https://github.com/jarodtaylor/ror-vite-tailwi
 ## Developer Setup
 Assuming you're not rolling with your own setup and you have Homebrew installed, let's get your developer environment setup. 
 
-### Install asdf and postgresql@15
+### Install asdf
+There are homebrew versions of asdf but it's highly recommended to use their [official installation method](https://asdf-vm.com/guide/getting-started.html#official-download). 
+
 ```
-brew install asdf postgresql@15
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
+
+You'll need to update you .zshrc (as described on the [asdf docs](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf:~:text=ZSH,-%26%20Git))
+```
+. "$HOME/.asdf/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
+```
+
 > [!NOTE]
 > After installing asdf you will need to make sure your 
 
