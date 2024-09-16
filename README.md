@@ -7,36 +7,69 @@ This is currently using Rails 7.2.
 
 ## Prerequisites
 
-This documentation assumes you're using a Mac and using [Homebrew](http://brew.sh). We'll be using a couple of tools to setup your environment. You can skip this section and install the dependencies in your own way. That said, the following things will be required before jumping to the [#Getting Started](#getting-started).
+The local develpment setup documents assume you're using a Mac and using [Homebrew](http://brew.sh). We'll be using a couple of tools to setup your environment. You can skip this section and install the dependencies in your own way. That said, the following things will be required.
 
-- Ruby
+- Ruby 3.1+
 - Node 18 (LTS) or newer
 - Yarn 1.x (classic)
 - PostgreSQL must be installed and accepting connections
 
-You can view the [.tool-versions](https://github.com/jarodtaylor/ror-vite-tailwind/blob/main/.tool-versions) file for this project's Ruby and Node versions.
+## Local Development Setup (optional)
 
-## Developer Setup
-Assuming you're not rolling with your own setup and you have Homebrew installed, let's get your developer environment setup. 
+<details>
+  
+  <summary>Optional Local Dev Setup</summary>
 
-### Install asdf
+### Install asdf (optional)
+
+> [!NOTE]
+> This project leverages [.tool-versions](https://asdf-vm.com/manage/configuration.html#tool-versions) for managing Ruby and NodeJS versions. If you'd prefer to use `rbenv` and `rvm`, you can skip this step and install the appropriate Ruby and NodeJS versions on your own, just make sure you install the right versions shown in [this repo's .tool-versions](https://github.com/jarodtaylor/ror-vite-tailwind/blob/main/.tool-versions).
+
 There are homebrew versions of asdf but it's highly recommended to use their [official installation method](https://asdf-vm.com/guide/getting-started.html#official-download). 
 
 ```
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 ```
 
-You'll need to update you .zshrc (as described on the [asdf docs](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf:~:text=ZSH,-%26%20Git))
+You'll need to update your `.zshrc` as described on the [asdf docs](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)). Most Mac users are using zsh so you'd want to read the directions under the ZSH & Git section.
+
 ```
 . "$HOME/.asdf/asdf.sh"
 fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
 ```
 
+> [!WARNING]
+> if you are using a custom compinit setup, make sure you read the directions for ZSH & Git on [asdf the installation docs](https://asdf-vm.com/guide/getting-started.html#_3-install-asdf). 
+
+#### Install asdf plugins
+This will allow us to add different versions of Ruby and Node in both your global and local project  `.tool-version` files.
+
+##### Add Ruby plugin
+```
+asdf plugin add ruby
+```
+
+##### Add NodeJS plugin
+```
+asdf plugin add nodejs
+```
+
+### Install Ruby and NodeJS versions
+Now that we have asdf setup with both the Ruby and NodeJS plugins, you can install the appropriate versions.
+
+#### Ruby
+```
+asdf install ruby latest
+```
 > [!NOTE]
-> After installing asdf you will need to make sure your 
+> If you run into an issue regarding ruby-build and `libyaml` you may need to install it using `brew install libyaml`. 
 
-### Install ruby and nodejs
-
+#### NodeJS
+```
+asdf install nodejs latest
+```
+</details>
 
 ## Getting started
 
