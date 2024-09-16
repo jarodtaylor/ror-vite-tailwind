@@ -1,24 +1,33 @@
-# ror_vite_tailwind
+# Ruby on Rails, Vite, Turbo Rails, Stimulus, and TailwindCSS
 
-This is a Rails 7.2 app.
+This is currently using Rails 7.2. 
+
+> [!NOTE]
+> This repository was initialized using [mattbricston/nextgen](https://github.com/mattbrictson/nextgen) in lieu of the standard `rails new`. It was used for the initial setup up of the Rails app with Vite, Turbo, and Stimulus. TailwindCSS, Devise, and others were added after the fact.
 
 ## Prerequisites
 
-This project requires:
+This documentation assumes you're using a Mac and using [Homebrew](http://brew.sh). We'll be using a couple of tools to setup your environment. You can skip this section and install the dependencies in your own way. That said, the following things will be required before jumping to the [#Getting Started](#getting-started).
 
-- Ruby (see [.ruby-version](./.ruby-version)), preferably managed using [rbenv](https://github.com/rbenv/rbenv)
+- Ruby
 - Node 18 (LTS) or newer
 - Yarn 1.x (classic)
 - PostgreSQL must be installed and accepting connections
 
-On macOS, these [Homebrew](http://brew.sh) packages are recommended:
+You can view the [.tool-versions](https://github.com/jarodtaylor/ror-vite-tailwind/blob/main/.tool-versions) file for this project's Ruby and Node versions.
 
+## Developer Setup
+Assuming you're not rolling with your own setup and you have Homebrew installed, let's get your developer environment setup. 
+
+### Install asdf and postgresql@15
 ```
-brew install rbenv
-brew install node
-brew install yarn
-brew install postgresql@16
+brew install asdf postgresql@15
 ```
+> [!NOTE]
+> After installing asdf you will need to make sure your 
+
+### Install ruby and nodejs
+
 
 ## Getting started
 
