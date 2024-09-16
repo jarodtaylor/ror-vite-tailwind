@@ -18,7 +18,7 @@ The local develpment setup documents assume you're using a Mac and using [Homebr
 
 <details>
   
-  <summary>Optional Local Dev Setup</summary>
+  <summary>Install Ruby and NodeJS with asdf</summary>
 
 ### Install asdf (optional)
 
@@ -69,6 +69,23 @@ asdf install ruby latest
 ```
 asdf install nodejs latest
 ```
+</details>
+
+<details>
+  
+  <summary>Install Postgresql</summary>
+
+  ### Get Postgres and Redis running
+  If you don't already have postgres and redis installed, install them with homebrew.
+  ```
+  brew install postgresql@15 redis
+  ```
+
+  Then you can start the services
+  ```
+  brew services start postgresql@15 && brew services start redis
+  ```
+  
 </details>
 
 ## Getting started
