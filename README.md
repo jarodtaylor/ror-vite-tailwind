@@ -111,6 +111,28 @@ asdf global nodejs latest
 </details>
 
 ## Getting started
+> [!WARNING]
+> If you followed the local development setup and installed `ruby` with `asdf` and Postgresql with homebrew, you will get an error, because the `pg` gem is trying to compile native extensions but can't find the necessary PostgreSQL client libraries or `pg_config`. The issue is caused by `asdf` not being able to locate the `pg_config` from your Homebrew installation.
+
+To fix this you need to install `libpq` with homebrew and then link the `pg_config` to your environment.
+```
+brew install libpq
+```
+Two options for linking the `pg_config`.
+
+#### Option one
+```
+brew link --force libpq
+```
+
+#### Option two (recommended)
+For a more permanent fix, so this isn't seen for any other postgresql libs you may add, add the following to your `.zshrc` file.
+```
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+```
+
 
 ### bin/setup
 
