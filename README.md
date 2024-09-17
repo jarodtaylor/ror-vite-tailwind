@@ -1,4 +1,4 @@
-# Ruby on Rails, Vite, Turbo Rails, Stimulus, and TailwindCSS
+t# Ruby on Rails, Vite, Turbo Rails, Stimulus, and TailwindCSS
 
 This is currently using Rails 7.2. 
 
@@ -15,7 +15,7 @@ This is currently using Rails 7.2.
 
 ## Local Development Setup (optional)
 
-If you already meet the requirements above, you can jump straigh to the Getting Started section. 
+If you meet the requirements above, you can jump straight to the Getting Started section. 
 
 <details>
   
