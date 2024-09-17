@@ -1,4 +1,4 @@
-t# Ruby on Rails, Vite, Turbo Rails, Stimulus, and TailwindCSS
+# Ruby on Rails, Vite, Turbo Rails, Stimulus, and TailwindCSS
 
 This is currently using Rails 7.2. 
 
